@@ -1,0 +1,43 @@
+main {
+    padding-top: 20px;
+}
+
+/* All about navbar */
+.navbar {
+    background-color: #0F45C7;
+}
+.navbar .navbar-nav .nav-link {
+    color: rgba(255,255,255,.8);
+}
+/* change the color of active or hovered links */
+.navbar .nav-item.active .nav-link,
+.navbar .nav-item:hover .nav-link {
+    color: #ffffff;
+}
+/* change the brand and text color */
+.navbar .navbar-brand,
+.navbar .navbar-text {
+    color: rgba(255,255,255,.9);
+}
+.navbar .btn-outline-success {
+    background: rgba(255,0,255,.9);
+}
+.navbar-toggler-icon {
+    color:white !important; /*Whatever colour you want for icon lines*/
+}
+.navbar-toggler {
+    background:#0F45C7 !important; /*Whatever colour you want for background */
+}
+
+ul.a {
+    list-style-type: none;
+    line-height: 2;
+}
+.leftimg {
+    float:left; /* Выравнивание по левому краю */
+    margin: 7px 7px 7px 0; /* Отступы вокруг картинки */
+}
+.rightimg  {
+    float: right; /* Выравнивание по правому краю  */
+    margin: 7px 0 7px 7px; /* Отступы вокруг картинки */
+}

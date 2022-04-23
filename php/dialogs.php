@@ -1,6 +1,6 @@
 <?php
 
-function print_login_dialog() {
+function print_login_dialog($enable_registration) {
   echo '
     <!-- Диалог авторизации : начало -->
     <div class="modal fade" id="loginModal">
@@ -16,7 +16,7 @@ function print_login_dialog() {
                             <form id="loginForm" method="POST" novalidate="novalidate">
                                 <div class="form-group">
                                     <label for="username" class="control-label">Адрес e-mail</label>
-                                    <input type="text" class="form-control" id="login" name="login" value="" required="" title="Please enter you username" placeholder="example@gmail.com">
+                                    <input type="text" class="form-control" id="login" name="login" value="" required="" title="Please enter you username" placeholder="example@gmail.com" autofocus>
                                     <span class="help-block"></span>
                                 </div>
                                 <div class="form-group">
@@ -36,8 +36,16 @@ function print_login_dialog() {
                                 <li><span class="fa fa-check text-success"></span> Можно получить оценку эксперта</li>
                                 <li><span class="fa fa-check text-success"></span> <b>Можно получить баллы к ЕГЭ</b></li>
                             </ul>
-                            <!--p><a href="register.php" class="btn btn-info btn-block">Пройти регистрацию</a></p-->
+    ';
+    if($enable_registration == true)
+        echo'
+                            <p><a href="register.php" class="btn btn-info btn-block">Пройти регистрацию</a></p>
+            ';
+    else
+        echo'
                             <p class="bg-primary text-white text-center"><b>Регистрация на конференцию окончена</b></p>
+            ';
+    echo '
                         </div>
                     </div>
                 </div>
